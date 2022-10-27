@@ -1,20 +1,25 @@
-#include<iostream>
-#include<string>
-
-struct student
-{
-    int age;
-    std::string name;
-};
+#include <iostream>
+#include <utility>
+#include "Learning/move_test.h"
 
 
 int main(void)
 {
-    student s = {1, "Tom"};
-    int old_v = s.age;
-    s.age = 12;
-    if (s.age != old_v)
-    {
-        std::cout << "age changed." << std::endl;
-    }
+
+
+	return 0;
 }
+
+/**
+输出：
+Pass lvalue: 左值传参，右值引用形参是左值
+             normal pass:call lvalue: 12 调用左值函数
+          std::move pass:call rvalue: 12 move强转为右值
+       std::forward pass:call lvalue: 12 左值forward还是左值
+   std::static_cast pass:call lvalue: 12 
+Pass rvalue: 右值传参，右值引用形参是右值
+             normal pass:call lvalue: 12 
+          std::move pass:call rvalue: 12
+       std::forward pass:call rvalue: 12
+   std::static_cast pass:call rvalue: 12
+**/
