@@ -1,12 +1,14 @@
 #include <iostream>
 #include <utility>
+
 #include "Learning/move_test.h"
+#include "Learning/array_test.h"
+#include "Learning/sstream_test.h"
 
 
 int main(void)
 {
-
-
+	sstream_test();
 	return 0;
 }
 
